@@ -22,4 +22,5 @@ public class GetRankRes {
         this.flagCount=flagCount;
         this.agoTime= agoTime;
     }
+
 }
