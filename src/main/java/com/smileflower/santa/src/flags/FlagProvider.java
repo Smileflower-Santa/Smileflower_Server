@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -58,10 +59,16 @@ public class FlagProvider {
         for(int i=0;i<2;i++){
             if(i==0){
                 GetRankRes getRankRes= flagDao.getfirstRank(mountainIdx);
+                if(getRankRes.getUserImage()!=null) {
+                    getRankRes.setUserImage(s3Service.getFileUrl(getRankRes.getUserImage()));
+                }
                 getFlagRankRes.setFirstRank(getRankRes);
             }
             else {
                 GetRankRes getRankRes= flagDao.getmyRank(userIdx,mountainIdx);
+                if(getRankRes.getUserImage()!=null){
+                    getRankRes.setUserImage(s3Service.getFileUrl(getRankRes.getUserImage()));
+                }
                 getFlagRankRes.setMyRank(getRankRes);
             }
         }
