@@ -20,3 +20,4 @@ before_install:
   -in secret.tar.enc -out secret.tar -d
 - tar xvf config.tar
 - tar xvf secret.tar
+
