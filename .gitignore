@@ -11,9 +11,8 @@ application.properties
 config.tar
 secret.tar
 
-src/main/java/com/smileflower/santa/config/secret
-secret
-Secret.class
+src/main/java/com/smileflower/santa/config/secret/Secret.java
+
 
 src/main/resources/static/
 
