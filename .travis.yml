@@ -18,3 +18,5 @@ before_install:
   -in config.tar.enc -out config.tar -d
 - openssl aes-256-cbc -K $encrypted_2895d60e3414_key -iv $encrypted_2895d60e3414_iv
   -in secret.tar.enc -out secret.tar -d
+- tar xvf config.tar
+- tar xvf secret.tar
