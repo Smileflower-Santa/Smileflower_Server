@@ -7,6 +7,10 @@ build/
 # 최초에만 주석 처리
 application.properties
 
+# tar 파일
+config.tar
+secret.tar
+
 src/main/java/com/smileflower/santa/config/secret
 secret
 Secret.class
