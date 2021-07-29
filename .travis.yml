@@ -16,7 +16,7 @@ notifications:
 before_install:
 - openssl aes-256-cbc -K $encrypted_f728702889c9_key -iv $encrypted_f728702889c9_iv -in Secret.java.enc -out Secret.java -d
 - openssl aes-256-cbc -K $encrypted_2f692484526a_key -iv $encrypted_2f692484526a_iv -in application.properties.enc -out application.properties -d
-- mv Secret.java ~/build/Smileflower_Santa/Smileflower_Server/src/main/java/com/smileflower/santa/config/secret
-- mv application.properties ~/build/Smileflower_Santa/Smileflower_Server/src/main/resources
+- mv Secret.java src/main/java/com/smileflower/santa/config/secret/
+- mv application.properties src/main/resources/
 
 
