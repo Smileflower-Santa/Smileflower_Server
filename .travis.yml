@@ -14,11 +14,10 @@ notifications:
     recipients:
     - dia0312@naver.com
 before_install:
-- openssl aes-256-cbc -K $encrypted_12eaa4ded41a_key -iv $encrypted_12eaa4ded41a_iv
-  -in ~/santa_server/src/main/resources/config.tar.enc -out ~/santa_server/src/main/resources/config.tar -d
-- openssl aes-256-cbc -K $encrypted_2895d60e3414_key -iv $encrypted_2895d60e3414_iv
-  -in ~/santa_server/src/main/java/com/smileflower/santa/config/secret/secret.tar.enc -out ~/santa_server/src/main/java/com/smileflower/santa/config/secret/secret.tar -d
-- tar xvf ~/santa_server/src/main/resources/config.tar
-- tar xvf ~/santa_server/src/main/java/com/smileflower/santa/config/secret/secret.tar
+- openssl aes-256-cbc -K $encrypted_f728702889c9_key -iv $encrypted_f728702889c9_iv -in Secret.java.enc -out Secret.java -d
+- openssl aes-256-cbc -K $encrypted_2f692484526a_key -iv $encrypted_2f692484526a_iv -in application.properties.enc -out application.properties -d
+- mkdir ./src/main/java/com/smileflower/santa/config/secret
+- mv Secret.java ./src/main/java/com/smileflower/santa/config/secret/
+- mv application.properties ./src/main/resources/
 
 
